@@ -36,8 +36,8 @@ RUN echo "syntax on" >> ~/.vimrc \
 WORKDIR /home
 
 # Cria as pastas "rendu" e "subjects" diretamente em /home e inicializa o repositório Git em "rendu"
-RUN mkdir -p /home/rendu /home/subjects \
-    && git init /home/rendu
+RUN mkdir -p ~/rendu ~/subjects \
+    && git init ~/rendu
 
 #  (Opcional) Configuração do bash para melhor usabilidade.
 RUN echo 'alias la="ls -la"' >> ~/.bashrc \
@@ -57,7 +57,7 @@ RUN echo '#!/bin/bash' > /usr/local/bin/finish \
     && chmod +x /usr/local/bin/finish
 
 # Cria um diretório "trace" diretamente em /home e adiciona um arquivo de exemplo com diff (em português)
-RUN mkdir -p /home/trace
+RUN mkdir -p ~/trace
 RUN echo '#!/bin/bash\n\
 echo "Exemplo de uso de diff -U 3 | cat -e"\n\
 echo "Criando arquivos de exemplo..."\n\
