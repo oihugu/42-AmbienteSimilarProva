@@ -58,3 +58,30 @@ Os comandos específicos do ambiente da prova são:
   - Termina a prova
 - status
   - Te mostra quanto tempo você ainda tem para fazer a prova, quais questões você já fez e em qual exercício você está atualmente
+---
+
+## Sobre o Dockerfile
+
+É um ambiente bem simples, talvez até mesmo menos rico em informações do que o restante do documento, para executa-lo precisamos de um computador que tenha o Docker instalado, ou no pc/notebook de casa, ou algum que tenha Docker instalado na 42 (Alguns tem, a maioria não, é na sorte)
+
+Como instalar o Docker no pc de casa ([Link]([url](https://www.youtube.com/watch?v=kh1gkqCrNx4&ab_channel=Kakto3D)).
+
+Para baixar o Dockerfile (Clonar esse repo e entrar na pasta)
+```
+git clone https://github.com/oihugu/42-AmbienteSimilarProva.git 42ASP
+cd 42ASP
+```
+
+Para construir o container (Como se estivesse falando que vai usar esse Dockerfile como um pc)
+```
+docker build -t 42-exam-env .
+```
+
+E para entrar no container (Como se estivesse transformando o seu shell no shell desse pc)
+```
+docker run -it --rm 42-exam-env
+```
+
+---
+
+Esse repositório é aberto a colaborações, e tem como objetivo dar mais acesso as informações da prova da piscina para a maior quantidade de pessoas possível, se você viu algo errado e quer corrigir(até mesmo erros de português) abra um pull request, se achou tudo certo compartilhe com alguém que se beneficiará dele.
